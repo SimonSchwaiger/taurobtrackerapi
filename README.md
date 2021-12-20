@@ -1,5 +1,17 @@
 # taurobtrackerapi
 
+This repository is a fork of the taurobtrackerapi repository in order to include some modification for the packages to work with ROS Melodic and Noetic.
+
+These changes were implemented:
+ * taurob_watchdog_client/src/taurob_watchdog_client.cpp: add return in line 68 to surpress compilation warning
+ * taurob_teleop_twist_joy/include/teleop_twist_joy/simple_inverse_kinematics.h: change lines 73 & 74 to static constexpr in order to comply with C++11
+ * libtaurob/include/libtaurob_arm/libtaurob_arm.h: change Arm_segment::SENDING_THREAD_PERIOD_MS and Arm::WATCHDOG_CHECKER_THREAD_PERIOD_MS from const to normal members because of linker errrors for ROS nodes that include the compiled libtaurob (see https://stackoverflow.com/questions/38912091/static-const-variable-declaration-in-a-header-file)
+ * libtaurob/include/libtaurob_flipper/libtaurob_flipper.h: change Flipper::SENDING_THREAD_PERIOD_MS and Flipper::WATCHDOG_CHECKER_THREAD_PERIOD_MS from const to normal members because of linker errrors for ROS nodes that include the compiled libtaurob (see https://stackoverflow.com/questions/38912091/static-const-variable-declaration-in-a-header-file)
+
+---
+
+# taurobtrackerapi
+
 This repository contains drivers for the taurob tracker robot system.
 
 ## Prerequisites
