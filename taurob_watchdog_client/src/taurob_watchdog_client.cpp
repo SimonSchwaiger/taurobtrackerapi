@@ -65,6 +65,7 @@ void *feed_watchdog_thread(void* data_ptr)
 		
 		usleep(WATCHDOG_FEED_INTERVAL * 1000);
 	}
+	return 0;
 }
 
 int main(int argc, char**argv)

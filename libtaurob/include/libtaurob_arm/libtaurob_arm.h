@@ -144,7 +144,7 @@ class Arm_segment : IUdpReceiverBinary
 
 	private:        
         static const int MAX_CONNECTION_LOSS_TIME_MS = 250;
-        static const int SENDING_THREAD_PERIOD_MS = 20;
+        const int SENDING_THREAD_PERIOD_MS = 20;
         static const int RESET_FRICTION_CLUTCH_FRAMES = 10;
 
 		std::string segment_name;
@@ -209,7 +209,7 @@ class Arm : IReceiveCallback
 
     private:        
         static const int WATCHDOG_MAX_TIME_MS = 250;
-        static const int WATCHDOG_CHECKER_THREAD_PERIOD_MS = 5;
+        const int WATCHDOG_CHECKER_THREAD_PERIOD_MS = 5;
 
         bool config_successful;
         std::vector<Arm_segment*> segments;

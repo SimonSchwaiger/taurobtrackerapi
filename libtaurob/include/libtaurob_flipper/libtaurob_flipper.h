@@ -121,10 +121,10 @@ class Flipper: IUdpReceiverBinary
         void produce_connection_diagnostics(diagnostic_updater::DiagnosticStatusWrapper& stat);
 
     private:
-        static const int SENDING_THREAD_PERIOD_MS = 20;
+        const int SENDING_THREAD_PERIOD_MS = 20;
 
         static const int WATCHDOG_MAX_TIME_MS = 250;
-        static const int WATCHDOG_CHECKER_THREAD_PERIOD_MS = 5;
+        const int WATCHDOG_CHECKER_THREAD_PERIOD_MS = 5;
 
         std::string host_ip;
         int host_port;
